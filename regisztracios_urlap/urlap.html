@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bali Gábor</title>
+</head>
+<body>
+    <div id="keret">
+        <h1>Regisztráció</h1>
+        <hr>
+        <form id="bevitel">
+            <label for="nev">Felahasználó név:</label><br>
+            <input type="text" id="nev" name="nev" title="8-20 karakter hosszú, ékezet nélküli kisbetűk" onkeyup="nev_ellenorzes()" required><br>
+            <span id="nev_hiba"></span><br><br>
+
+            <label for="email">E-mail cím:</label><br>
+            <input type="email" id="email" name="email" title="Csak érvényes e-mail címet adhat meg." onkeyup="email_ellenorzes()" required><br>
+            <span id="email_hiba"></span><br><br>
+
+            <label for="telefon">Telefonszám:</label><br>
+            <input type="text" id="telefon" name="telefon" title="6-12 karakter 06701234567 formában." onkeyup="telefon_ellenorzes()" required><br>
+            <span id="telefon_hiba"></span><br><br>
+
+            <label for="datum">Születési dátum:</label><br>
+            <input type="date" id="datum" name="datum" title="Csak 18 év felettiek regisztrálhatnak." required><br><br><br>
+
+            <label for="jelszo">Jelszó:</label><br>
+            <input type="text" id="jelszo" name="jelszo" title="8-20 karakter hosszú, szám, kis és nagy ékezet nélküli betűk." required><br><br><br>
+
+            <label for="jelszo_ujra">Jelszó újra:</label><br>
+            <input type="text" id="jelszo_ujra" name="jelszo_ujra" title="A jelszónak egyeznie kell." required><br><br><br>
+
+            <label for="elfogad">Az ÁSZF-et és a felhasználói feltételeket elolvastam, elfogadom: </label>
+            <input type="checkbox" id="elfogad" name="elfogad" title="Kérem fogadja el." required><br><br><br>
+
+            <input type="submit" value="Regisztráció" id="gomb" title="A gomb lenyomásával ön regisztrál az oldalon.">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
