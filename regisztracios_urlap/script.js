@@ -10,12 +10,12 @@ function good(name){
 
 function nev_ellenorzes(){
     
-    let minta = /^[a-z]{8,20}$/;
+    let minta = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{8,20}$/;
     let felhasznalo_nev = document.getElementById("nev").value;
     let hiba = document.getElementById("nev_hiba");
     
     if(minta.test(felhasznalo_nev) == false){
-        hiba.textContent = "8-20 karakter hosszú, ékezet nélküli kisbetű";
+        hiba.textContent = "8-20 karakter hosszú, ékezet nélküli kis és nagybetű.";
         bad("nev");
     }
     else{
@@ -58,3 +58,22 @@ function telefon_ellenorzes(){
     }
 }
 
+
+function datum_ellenorzes(){
+
+    let datum = document.getElementById("datum").value;
+    let hiba = document.getElementById("datum_hiba");
+    let datum_ma = new Date();
+    let datum18 = new Date(datum);
+    datum18.setFullYear(datum18.getFullYear() + 18);
+
+
+    if(datum_ma < datum18){
+        hiba.textContent = "Csak 18 év felettiek regisztrálhatnak!";
+        bad("datum");
+    }
+    else {
+        hiba.textContent = "";
+        good("datum");
+    }
+}
