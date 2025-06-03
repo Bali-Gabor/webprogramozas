@@ -30,17 +30,7 @@ form{
     left: 225px;
 }
 
-#nev_hiba{
-    color: red;
-    font-size: 10px;
-}
-
-#email_hiba{
-    color: red;
-    font-size: 10px;
-}
-
-#telefon_hiba{
+#nev_hiba, #email_hiba, #telefon_hiba, #datum_hiba, #jelszo_hiba, #jelszo_ujra_hiba, #elfogad_hiba{
     color: red;
     font-size: 10px;
 }

@@ -67,7 +67,6 @@ function datum_ellenorzes(){
     let datum18 = new Date(datum);
     datum18.setFullYear(datum18.getFullYear() + 18);
 
-
     if(datum_ma < datum18){
         hiba.textContent = "Csak 18 év felettiek regisztrálhatnak!";
         bad("datum");
@@ -75,5 +74,52 @@ function datum_ellenorzes(){
     else {
         hiba.textContent = "";
         good("datum");
+    }
+}
+
+
+function jelszo_ellenorzes(){
+     let minta = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/;
+     let jelszo = document.getElementById("jelszo").value;
+     let hiba = document.getElementById("jelszo_hiba");
+
+     if(minta.test(jelszo) == false){
+        hiba.textContent = "8-20 karakter hosszú, szám, kis és nagy ékezet nélküli betűk.";
+        bad("jelszo");
+     }
+     else{
+        hiba.textContent = "";
+        good("jelszo");
+     }
+}
+
+
+function jelszo_ujra_ellenorzes(){
+    let jelszo = document.getElementById("jelszo").value;
+    let jelszo_ujra = document.getElementById("jelszo_ujra").value;
+    let hiba = document.getElementById("jelszo_ujra_hiba");
+
+    if(jelszo != jelszo_ujra){
+        hiba.textContent = "A jelszónak egyeznie kell!";
+        bad("jelszo_ujra");
+    }
+    else{
+        hiba.textContent = "";
+        good("jelszo_ujra");
+    }
+}
+
+
+function elfogad_ellenorzes(){
+    let elfogad = document.getElementById("elfogad");
+    let hiba = document.getElementById("elfogad_hiba");
+
+    if(elfogad.checked){
+        hiba.textContent = "";
+        good("elfogad");
+    }
+    else{
+        hiba.textContent = "Az ASZF-et el kell fogadni.";
+        bad("elfogad");
     }
 }

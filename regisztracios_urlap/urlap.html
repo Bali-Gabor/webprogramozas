@@ -24,17 +24,20 @@
             <span id="telefon_hiba"></span><br><br>
 
             <label for="datum">Születési dátum:</label><br>
-            <input type="date" id="datum" name="datum" title="Csak 18 év felettiek regisztrálhatnak." required><br> 
+            <input type="date" id="datum" name="datum" title="Csak 18 év felettiek regisztrálhatnak." onchange="datum_ellenorzes()" required><br> 
             <span id="datum_hiba"></span><br><br>
 
             <label for="jelszo">Jelszó:</label><br>
-            <input type="text" id="jelszo" name="jelszo" title="8-20 karakter hosszú, szám, kis és nagy ékezet nélküli betűk." required><br><br><br>
+            <input type="text" id="jelszo" name="jelszo" title="8-20 karakter hosszú, szám, kis és nagy ékezet nélküli betűk." onkeyup="jelszo_ellenorzes()" required><br>
+            <span id="jelszo_hiba"></span><br><br>
 
             <label for="jelszo_ujra">Jelszó újra:</label><br>
-            <input type="text" id="jelszo_ujra" name="jelszo_ujra" title="A jelszónak egyeznie kell." required><br><br><br>
+            <input type="text" id="jelszo_ujra" name="jelszo_ujra" title="A jelszónak egyeznie kell." onkeyup="jelszo_ujra_ellenorzes()" required><br>
+            <span id="jelszo_ujra_hiba"></span><br><br>
 
             <label for="elfogad">Az ÁSZF-et és a felhasználói feltételeket elolvastam, elfogadom: </label>
-            <input type="checkbox" id="elfogad" name="elfogad" title="Kérem fogadja el." required><br><br><br>
+            <input type="checkbox" id="elfogad" name="elfogad" title="Kérem fogadja el." onchange="elfogad_ellenorzes()" required><br>
+            <span id="elfogad_hiba"></span><br><br>
 
             <input type="submit" value="Regisztráció" id="gomb" title="A gomb lenyomásával ön regisztrál az oldalon.">
         </form>
