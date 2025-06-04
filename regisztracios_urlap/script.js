@@ -8,12 +8,12 @@ function zold(name){
 }
 
 
-var controll_nev = false;
-var controll_email = false;
-var controll_telefon = false;
-var controll_datum = false;
-var controll_jelszo_ujra = false;
-var controll_elfogad = false;
+var controll_nev;
+var controll_email;
+var controll_telefon;
+var controll_datum;
+var controll_jelszo_ujra;
+var controll_elfogad;
 
 
 function nev_ellenorzes(){
