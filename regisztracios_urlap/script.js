@@ -56,7 +56,7 @@ function email_ellenorzes(){
 
 function telefon_ellenorzes(){
 
-    let minta = /^[0-9]{8,20}$/
+    let minta = /^06[0-9]{8,9}$/
     let telefon = document.getElementById("telefon").value;
     let hiba = document.getElementById("telefon_hiba");
 
