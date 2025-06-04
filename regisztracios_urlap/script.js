@@ -1,11 +1,19 @@
-function bad(name){
+function piros(name){
     document.getElementById(name).style.border = "solid red";
 }
 
 
-function good(name){
+function zold(name){
     document.getElementById(name).style.border = "solid lightgreen";
 }
+
+
+var controll_nev = false;
+var controll_email = false;
+var controll_telefon = false;
+var controll_datum = false;
+var controll_jelszo_ujra = false;
+var controll_elfogad = false;
 
 
 function nev_ellenorzes(){
@@ -13,14 +21,16 @@ function nev_ellenorzes(){
     let minta = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{8,20}$/;
     let felhasznalo_nev = document.getElementById("nev").value;
     let hiba = document.getElementById("nev_hiba");
-    
+        
     if(minta.test(felhasznalo_nev) == false){
         hiba.textContent = "8-20 karakter hosszú, ékezet nélküli kis és nagybetű.";
-        bad("nev");
+        piros("nev");
+        controll_nev = false;
     }
     else{
         hiba.textContent = "";
-        good("nev");
+        zold("nev");
+        controll_nev = true;
     }
 }
 
@@ -33,28 +43,32 @@ function email_ellenorzes(){
 
     if(minta.test(e_mail) == false){
         hiba.textContent = "Nem felel meg a formai követelményeknek.";
-        bad("email");
+        piros("email");
+        controll_email = false;
     }
     else{
         hiba.textContent = "";
-        good("email");
+        zold("email");
+        controll_email = true;
     }
 }
 
 
 function telefon_ellenorzes(){
 
-    let minta = /^[0-9]{6,12}$/
+    let minta = /^[0-9]{8,20}$/
     let telefon = document.getElementById("telefon").value;
     let hiba = document.getElementById("telefon_hiba");
 
     if (minta.test(telefon) == false){
         hiba.textContent = "Formátum: 06701234567";
-        bad("telefon");
+        piros("telefon");
+        controll_telefon = false;
     }
     else {
         hiba.textContent = "";
-        good("telefon");
+        zold("telefon");
+        controll_telefon = true;
     }
 }
 
@@ -69,11 +83,13 @@ function datum_ellenorzes(){
 
     if(datum_ma < datum18){
         hiba.textContent = "Csak 18 év felettiek regisztrálhatnak!";
-        bad("datum");
+        piros("datum");
+        controll_datum = false;
     }
     else {
         hiba.textContent = "";
-        good("datum");
+        zold("datum");
+        controll_datum = true;
     }
 }
 
@@ -85,11 +101,17 @@ function jelszo_ellenorzes(){
 
      if(minta.test(jelszo) == false){
         hiba.textContent = "8-20 karakter hosszú, szám, kis és nagy ékezet nélküli betűk.";
-        bad("jelszo");
+        piros("jelszo");
      }
      else{
         hiba.textContent = "";
-        good("jelszo");
+        zold("jelszo");
+     }
+
+     let jelszo_ujra = document.getElementById("jelszo_ujra").value;
+
+     if(jelszo_ujra){
+        jelszo_ujra_ellenorzes();
      }
 }
 
@@ -101,11 +123,13 @@ function jelszo_ujra_ellenorzes(){
 
     if(jelszo != jelszo_ujra){
         hiba.textContent = "A jelszónak egyeznie kell!";
-        bad("jelszo_ujra");
+        piros("jelszo_ujra");
+        controll_jelszo_ujra = false;
     }
     else{
         hiba.textContent = "";
-        good("jelszo_ujra");
+        zold("jelszo_ujra");
+        controll_jelszo_ujra = true;
     }
 }
 
@@ -116,10 +140,24 @@ function elfogad_ellenorzes(){
 
     if(elfogad.checked){
         hiba.textContent = "";
-        good("elfogad");
+        controll_elfogad = true;
     }
     else{
         hiba.textContent = "Az ASZF-et el kell fogadni.";
-        bad("elfogad");
+        controll_elfogad = false;
     }
+}
+
+
+function regisztracio(){
+    
+    if(controll_nev && controll_email && controll_telefon && controll_datum && controll_jelszo_ujra && controll_elfogad){
+        document.getElementById("oldal").style.backgroundColor = "white";
+        document.getElementById("keret").style.visibility = "hidden";
+        let szoveg = document.getElementById("oldal");
+        szoveg.innerHTML = "Sikeres regisztráció!";
+        szoveg.style.color = "green";
+        szoveg.style.textAlign = "center";
+        szoveg.style.fontWeight = "bold";
+    }   
 }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Bali Gábor</title>
 </head>
-<body>
+<body id="oldal">
     <div id="keret">
         <h1>Regisztráció</h1>
         <hr>
@@ -39,7 +39,7 @@
             <input type="checkbox" id="elfogad" name="elfogad" title="Kérem fogadja el." onchange="elfogad_ellenorzes()" required><br>
             <span id="elfogad_hiba"></span><br><br>
 
-            <input type="submit" value="Regisztráció" id="gomb" title="A gomb lenyomásával ön regisztrál az oldalon.">
+            <input type="submit" value="Regisztráció" id="gomb" title="A gomb lenyomásával ön regisztrál az oldalon." onclick="regisztracio()">
         </form>
     </div>
     <script src="script.js"></script>

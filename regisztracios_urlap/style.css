@@ -5,7 +5,7 @@ body{
 #keret{
     margin: 0 auto;
     margin-top: 120px;
-    background-color: white;
+    background: linear-gradient(grey, white);
     width: 400px;
     height: 700px;
     border-radius: 10px;
