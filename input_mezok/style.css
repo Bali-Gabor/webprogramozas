@@ -1,0 +1,22 @@
+body{
+    background: radial-gradient(rgb(235, 189, 189), rgb(170, 218, 170));
+}
+
+#doboz{
+    background-color: rgb(128,26,250);
+    width: 215px;
+    height: 200px;
+    position: absolute;
+    left: 720px; 
+    top:200px;  
+}
+
+#keret{
+    width: 220px;
+    height: 200px;
+    background: linear-gradient(rgb(252, 196, 255), rgb(225, 225, 225));
+    padding: 0px 5px;
+    position: absolute;
+    left: 500px;
+    top: 200px;
+}

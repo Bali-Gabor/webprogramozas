@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="keret">
+    <label>piros:</label>
+    <input type="range" id="red" value="50"onchange="valtozas()"><br>
+    <input type="text" id="redt" value="128">
+    <label id="pkod"></label><br>
+    <label>zöld:</label>
+    <input type="range" id="green" value="10" onchange="valtozas()"><br>
+    <input type="text" id="greent" value="26">
+    <label id="zkod"></label><br>
+    <label>kék:</label>
+    <input type="range" id="blue" value="98" onchange="valtozas()"><br>
+    <input type="text" id="bluet" value="250">
+    <label id="kkod"></label><br><br>
+    <input type="button" value="Beállít" onclick="valtozas_gomb()">
+    </div>
+    <div id="doboz"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
