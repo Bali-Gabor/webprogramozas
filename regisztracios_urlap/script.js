@@ -4,7 +4,7 @@ function piros(name){
 
 
 function zold(name){
-    document.getElementById(name).style.border = "solid lightgreen";
+    document.getElementById(name).style.border = "solid rgb(22, 178, 22)";
 }
 
 
