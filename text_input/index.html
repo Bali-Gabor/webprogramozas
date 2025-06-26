@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="keret">
+        <label>Jelszó:</label><br><br>
+        <input type="password" id="szoveg" onkeyup="ellenorzes()" placeholder="Ide írd be a jelszót!" required><br>
+        <span id="hiba"></span><br>
+        <label>Jelszó újra:</label><br><br>
+        <input type="password" id="szoveg2" onkeyup="ellenorzes2()" placeholder="Írd be újra a jelszót!" required><br>
+        <span id="hiba2"></span><br><br>
+        <input type="button" value="Bevitel">
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

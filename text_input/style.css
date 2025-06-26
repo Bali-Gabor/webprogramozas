@@ -1,0 +1,19 @@
+#keret{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 200px;
+}
+
+#szoveg, #szoveg2{
+    text-align: center;
+}
+
+#hiba, #hiba2{
+    color: red;
+    font-size: 9px;
+    font-weight: bold;
+}
