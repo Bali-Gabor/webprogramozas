@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalória Kalulátor</title>
+</head>
+<body>
+    <div id="keret">
+        <div class="elso_oszlop elso_sor">
+            Sport, mozgás
+        </div>
+        <div class="masodik_oszlop elso_sor">
+            kcal/óra
+        </div>
+        <div class="harmadik_oszlop elso_sor">
+            perc
+        </div>
+        <div class="negyedik_oszlop elso_sor">
+            kcal
+        </div>
+        <div class="elso_oszlop sorok">
+            Futás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            680
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="futasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="futaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Focizás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            550
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="focizasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="focizaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Bringázás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            480
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="bringazasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="bringazaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Hegymászás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            430
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="hegymaszasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="hegymaszaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Lovaglás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            360
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="lovaglasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="lovaglaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Túrázás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            350
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="turazasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="turazaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok">
+            Kajakozás
+        </div>
+        <div class="masodik_oszlop sorok sarga">
+            330
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <input type="text" maxlength="4" placeholder="0" autocomplete="off" class="bevitel" id="kajakozasbe" onkeyup="szamolas()">
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="kajakozaski">0</label>
+        </div>
+        <div class="elso_oszlop sorok osszesen">
+            Összesen:
+        </div>
+        <div class="masodik_oszlop sorok" id="ures">
+            0
+        </div>
+        <div class="harmadik_oszlop sorok">
+            <label class="bevitel" id="percossz">0</label>
+        </div>
+        <div class="negyedik_oszlop sorok">
+            <label class="kiir" id="kcalossz">0</label>
+        </div>
+        <div class="szazalek sorok">Napi energiaszükséglet (2000 kcal) arányában:</div>
+        <div class="sorok">
+            <label id="arany" class="szazalek">0 %</label>
+        </div>
+        <input type="button" value="Adatok törlése" id="gomb" onclick="torles()">
+    </div>
+    <script src="script.js"></script>    
+</body>
+</html>
