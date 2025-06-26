@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalória Kalkulátor</title>
+</head>
+<body>
+    <div id="keret">
+
+        <div class="felkover">Sport, mozgás</div>
+        <div class="felkover kozeprezart">kcal/óra</div>
+        <div class="felkover jobbrazart">perc</div>
+        <div class="felkover jobbrazart">kcal</div>
+
+        <div>Futás</div>
+        <div class="kozeprezart sarga felkover">680</div>
+        <input type="text" id="futas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('futas')">
+        <label for="futas" id="futaski" class="jobbrazart">0</label>
+
+        <div>Focizás</div>
+        <div class="kozeprezart sarga felkover">550</div>
+        <input type="text" id="focizas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('focizas')">
+        <label for="focizas" id="focizaski" class="jobbrazart">0</label>
+
+        <div>Bringázás</div>
+        <div class="kozeprezart sarga felkover">480</div>
+        <input type="text" id="bringazas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('bringazas')">
+        <label for="bringazas" id="bringazaski" class="jobbrazart">0</label>
+
+        <div>Hegymászás</div>
+        <div class="kozeprezart sarga felkover">430</div>
+        <input type="text" id="hegymaszas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('hegymaszas')">
+        <label for="hegymaszas" id="hegymaszaski" class="jobbrazart">0</label>
+        
+        <div>Lovaglás</div>
+        <div class="kozeprezart sarga felkover">360</div>
+        <input type="text" id="lovaglas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('lovaglas')">
+        <label for="lovaglas" id="lovaglaski" class="jobbrazart">0</label>
+
+        <div>Túrázás</div>
+        <div class="kozeprezart sarga felkover">350</div>
+        <input type="text" id="turazas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('turazas')">
+        <label for="turazas" id="turazaski" class="jobbrazart">0</label>
+
+        <div>Kajakozás</div>
+        <div class="kozeprezart sarga felkover">330</div>
+        <input type="text" id="kajakozas" class="bemenet jobbrazart" maxlength="4" placeholder="0" autocomplete="off" onkeyup="szamolas('kajakozas')">
+        <label for="kajakozas" id="kajakozaski" class="jobbrazart">0</label>
+
+        <div id="osszesen">Összesen:</div>
+        <label id="percosszesen" class="felkover jobbrazart">0</label>
+        <label id="kcalosszesen" class="jobbrazart">0</label>
+
+        <div id="felirat" class="kisbetu">Napi energiaszükséglet (2000 kcal) arányában:</div>
+        <label id="szazalek" class="felkover kisbetu">0 %</label>
+
+        <input type="button" value="Adatok törlése" id="gomb" class="felkover" onclick="torles()">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
