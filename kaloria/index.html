@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalória kalkulátor</title>
+</head>
+<body>
+    <div id="keret">
+        <label class="fejlec">Sport, mozgás</label>
+        <label class="fejlec kozep">kcal/óra</label>
+        <label class="fejlec jobb">perc</label>
+        <label class="fejlec jobb">kcal</label>
+
+        <label>Futás</label>
+        <label class="sarga kozep">680</label>
+        <input type="text" id="fut" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('fut')">
+        <label id="futki" class="jobb">0</label>
+
+        <label>Focizás</label>
+        <label class="sarga kozep">550</label>
+        <input type="text" id="foci" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('foci')">
+        <label id="fociki" class="jobb">0</label>
+
+        <label>Bringázás</label>
+        <label class="sarga kozep">480</label>
+        <input type="text" id="bringa" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('bringa')">
+        <label id="bringaki" class="jobb">0</label>
+
+        <label>Hegymászás</label>
+        <label class="sarga kozep">430</label>
+        <input type="text" id="hegy" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('hegy')">
+        <label id="hegyki" class="jobb">0</label>
+
+        <label>Lovaglás</label>
+        <label class="sarga kozep">360</label>
+        <input type="tex" id="lo" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('lo')"">
+        <label id="loki" class="jobb">0</label>
+
+        <label>Túrázás</label>
+        <label class="sarga kozep">350</label>
+        <input type="text" id="tura" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('tura')"">
+        <label id="turaki" class="jobb">0</label>
+
+        <label>Kajakozás</label>
+        <label class="sarga kozep">330</label>
+        <input type="text" id="kajak" autocomplete="off" maxlength="4" placeholder="0" class="jobb bemenet" onkeyup="bevitel('kajak')"">
+        <label id="kajakki" class="jobb">0</label>
+
+        <label>Összesen:</label>
+        <label class="kozep"></label>
+        <label id="percossz" class="jobb">0</label>
+        <label id="kcalossz" class="jobb">0</label>
+
+        <label id="felirat" class="kisbetu">Napi energiaszükséglet (2000 kcal) arányában:</label>
+        <label id="szazalek" class="kisbetu">0 %</label>
+
+        <input type="button" id="gomb" value="Adatok törlése" onclick="torles()">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

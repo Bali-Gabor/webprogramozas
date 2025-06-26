@@ -1,0 +1,71 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#keret{
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: 40% 20% 30% 30%;
+    grid-template-rows: repeat(11, 30px);
+    row-gap: 5px;
+}
+
+.jobb{
+    text-align: right;
+}
+
+.kozep{
+    text-align: center;
+}
+
+.bemenet{
+    width: 40px;
+    height: 17px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: end;
+    border: white;
+}
+
+input::placeholder{
+    color: black;
+    font-size: 17px;
+
+}
+
+.sarga{
+    margin: 0 auto;
+    background-color: rgb(255, 187, 78);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    width: 60%;  
+}
+
+#felirat{
+    grid-column: 1/4;
+    grid-row: 10;
+}
+
+#szazalek, #percossz, .fejlec{
+    font-weight: bold;
+}
+
+.kisbetu{
+    font-size: 14px;
+}
+
+#gomb{
+    grid-column: 1/5;
+    grid-row: 11;
+    background-color: rgb(125, 199, 198);
+    border: 0px white;
+    border-radius: 5px;
+    color: white;
+}
+
+#gomb:active{
+    background-color: rgb(100, 175, 175);
+}
